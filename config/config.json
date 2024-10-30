@@ -88,7 +88,7 @@
             "datasets": {
                 "cdc": "cortex_tiktok_cdc_c6",
                 "raw": "cortex_tiktok_raw_c6",
-                "reporting": "TikTok_REPORTING_C6_C6"
+                "reporting": "TikTok_REPORTING_C6"
             }
         },
         "LiveRamp": {
