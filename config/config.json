@@ -2,7 +2,7 @@
     "testData": true,
     "deploySAP": true,
     "deploySFDC": false,
-    "deployMarketing": true,
+    "deployMarketing": false,
     "deployOracleEBS": false,
     "deployDataMesh": true,
     "deploySAPMLModels": true,
@@ -20,9 +20,9 @@
     },
     "DataMesh": {
         "deployDescriptions": true,
-        "deployLakes": true,
-        "deployCatalog": true,
-        "deployACLs": true
+        "deployLakes": false,
+        "deployCatalog": false,
+        "deployACLs": false
     },
     "SAP": {
         "deployCDC": true,
