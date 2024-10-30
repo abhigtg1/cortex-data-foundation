@@ -1,32 +1,32 @@
 {
     "testData": true,
     "deploySAP": true,
-    "deploySFDC": true,
+    "deploySFDC": false,
     "deployMarketing": true,
-    "deployOracleEBS": true,
+    "deployOracleEBS": false,
     "deployDataMesh": true,
-    "deploySAPMLModels": false,
+    "deploySAPMLModels": true,
     "turboMode": true,
-    "projectIdSource": "",
-    "projectIdTarget": "",
-    "targetBucket": "",
+    "projectIdSource": "abhi-demo-cortex",
+    "projectIdTarget": "abhi-demo-cortex",
+    "targetBucket": "abhi-demo-cortex6-bkt",
     "location": "US",
     "testDataProject": "kittycorn-public",
     "k9": {
         "datasets": {
-            "processing": "K9_PROCESSING",
-            "reporting": "K9_REPORTING"
+            "processing": "K9_PROCESSING_C6",
+            "reporting": "K9_REPORTING_C6"
         }
     },
     "DataMesh": {
         "deployDescriptions": true,
-        "deployLakes": false,
-        "deployCatalog": false,
-        "deployACLs": false
+        "deployLakes": true,
+        "deployCatalog": true,
+        "deployACLs": true
     },
     "SAP": {
         "deployCDC": true,
-        "SQLFlavor": "ecc",
+        "SQLFlavor": "s4",
         "mandt": "100",
         "languages": [
             "E",
@@ -36,16 +36,16 @@
             "USD"
         ],
         "datasets": {
-            "cdc": "",
-            "raw": "",
-            "ml": "ML_MODELS",
-            "reporting": "REPORTING"
+            "cdc": "cortex_sap_cdc_c6",
+            "raw": "cortex_sap_raw_c6",
+            "ml": "ML_MODELS_C6",
+            "reporting": "SAP_REPORTING_C6"
         }
     },
     "SFDC": {
-        "deployCDC": true,
-        "createMappingViews": true,
-        "createPlaceholders": true,
+        "deployCDC": false,
+        "createMappingViews": false,
+        "createPlaceholders": false,
         "currencies": [
             "USD"
         ],
@@ -69,8 +69,8 @@
             "deployCDC": true,
             "lookbackDays": 180,
             "datasets": {
-                "cdc": "",
-                "raw": "",
+                "cdc": "cortex_GoogleAds_cdc_c6",
+                "raw": "cortex_GoogleAds_raw_c6",
                 "reporting": "REPORTING_GoogleAds"
             }
         },
@@ -78,47 +78,47 @@
             "deployCDC": true,
             "dataTransferBucket": "",
             "datasets": {
-                "cdc": "",
-                "raw": "",
-                "reporting": "REPORTING_CM360"
+                "cdc": "cortex_cm360_cdc_c6",
+                "raw": "cortex_cm360_raw_c6",
+                "reporting": "CM360_REPORTING_C6"
             }
         },
         "TikTok": {
             "deployCDC": true,
             "datasets": {
-                "cdc": "",
-                "raw": "",
-                "reporting": "REPORTING_TikTok"
+                "cdc": "cortex_tiktok_cdc_c6",
+                "raw": "cortex_tiktok_raw_c6",
+                "reporting": "TikTok_REPORTING_C6_C6"
             }
         },
         "LiveRamp": {
             "datasets": {
-                "cdc": ""
+                "cdc": "cortex_liveramp_cdc_c6"
             }
         },
         "Meta": {
             "deployCDC": true,
             "datasets": {
-                "cdc": "",
-                "raw": "",
-                "reporting": "REPORTING_Meta"
+                "cdc": "cortex_meta_cdc_c6",
+                "raw": "cortex_meta_raw_c6",
+                "reporting": "Meta_REPORTING_C6"
             }
         },
         "SFMC": {
             "deployCDC": true,
             "fileTransferBucket": "",
             "datasets": {
-                "cdc": "",
-                "raw": "",
-                "reporting": "REPORTING_SFMC"
+                "cdc": "cortex_sfmc_cdc_c6",
+                "raw": "cortex_sfmc_raw_c6",
+                "reporting": "SFMC_REPORTING_C6"
             }
         },
         "DV360": {
             "deployCDC": true,
             "datasets": {
-                "raw": "",
-                "cdc": "",
-                "reporting": "REPORTING_DV360"
+                "raw": "cortex_dv360_raw_c6",
+                "cdc": "cortex_dv360_cdc_c6",
+                "reporting": "DV360_REPORTING_C6"
             }
         },
         "GA4": {
@@ -126,7 +126,7 @@
                 "cdc": [
                     {"property_id": 0, "name": ""}
                 ],
-                "reporting": "REPORTING_GA4"
+                "reporting": "GA4_REPORTING_C6"
             }
         }
     },
